@@ -59,6 +59,11 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-reactive-pg-client</artifactId>
     </dependency>
+      <dependency>
+          <groupId>io.smallrye.reactive</groupId>
+          <artifactId>smallrye-reactive-converter-rxjava2</artifactId>
+          <version>1.0.5</version>
+      </dependency>
   </dependencies>
   <build>
     <plugins>
