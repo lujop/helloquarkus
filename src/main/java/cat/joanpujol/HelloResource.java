@@ -1,8 +1,6 @@
 package cat.joanpujol;
 
 import cat.joanpujol.services.HiService;
-import cat.joanpujol.services.HiService2;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

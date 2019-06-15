@@ -20,7 +20,7 @@ public class HiService {
     String hiName;
 
     public String getHiMessage() {
-        String hiMessage = "hello  " + hiName + " I'm in " + environment + " environment";
+        String hiMessage = "hello " + hiName + " I'm in " + environment + " environment";
         count.incrementAndGet();
         requestScopedCounter.incrementAndGet();
         return hiMessage;

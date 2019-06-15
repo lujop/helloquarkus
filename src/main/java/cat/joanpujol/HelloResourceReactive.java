@@ -1,5 +1,6 @@
 package cat.joanpujol;
 
+import cat.joanpujol.util.RxUtils;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.smallrye.reactive.converters.ReactiveTypeConverter;
@@ -41,10 +42,6 @@ public class HelloResourceReactive {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("hello3")
     public CompletionStage<String> helloRxJava(@QueryParam("name") @DefaultValue("Joan") String name) {
-        Single<String> result = Single.just("Hi " + name);
-
-        //Conversion, should be automatic...
-        ReactiveTypeConverter<Single> converter = Registry.lookup(Single.class).orElseThrow(() -> new RuntimeException("No converter found"));
-        return converter.toCompletionStage(result);
+        return RxUtils.convert(Single.just("Hi " + name));
     }
 }
